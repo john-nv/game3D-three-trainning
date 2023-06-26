@@ -1,0 +1,5 @@
+MeshStandardMaterial => anh sang nang cao co nhieu config
+MeshBasicMaterial => anh sang don gian
+
+
+dat.gui => thu vien ho tro ui giao dien nguoi dung truyen tham so
