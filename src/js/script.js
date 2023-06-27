@@ -49,7 +49,7 @@ plene.receiveShadow = true;
 scene.add(plene)
 plene.rotation.x = -0.5 * Math.PI
 
-const gui = new dat.GUI({ autoPlace: false })
+const gui = new dat.GUI({ autoPlace: true })
 gui.domElement.style.position = 'fixed';
 gui.domElement.style.bottom = '30px';
 gui.domElement.style.left = '0';
@@ -77,7 +77,7 @@ const options = {
 // -----------------------------------------
 
 // -----------------------------------------
-// anh sang san khau
+// anh sang san khau 
 const spotLight = new THREE.SpotLight(0xFFFFFD)
 scene.add(spotLight)
 spotLight.position.set(-100, 100, 0);
@@ -122,7 +122,8 @@ function animate(time) {
   box.rotation.y += 0.02;
 
   step += options.speed;
-  sphere.position.y = options.height * Math.abs(Math.sin(step))
+  sphere.position.y = options.height * Math.abs(Math.sin(step)) + 1
+  // sphere.position = options.height
 
   spotLight.angle = options.angle;
   spotLight.penumbra = options.penumbra;
